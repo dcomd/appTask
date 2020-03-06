@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">NepomucenoTasks</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="nome">Nome</string>
+    <string name="Email">Email</string>
+    <string name="password">Password</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="informardados">Favor informar todos os campos</string>
+    <string name="emailExistente">Email existente, favor informar outro</string>
+    <string name="ErroAoInserir">Erro ao inserir dados</string>
+    <string name="DadosSucesso">Dados inseridos com sucesso</string>
+    <string name="entrar">Entrar</string>
+    <string name="msgSenhaincorretas">Usuário e/ou senha incorretos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tarefaSalva">Tarefa Salva com sucesso</string>
+    <string name="terefa_alterada">Tarefa alterada com sucesso</string>
+    <string name="erro_cad_tarefa">Erro ao salvar tarefa</string>
+    <string name="erro_alt_tarefa">Erro ao alterar tarefa</string>
+    <string name="atualizar_tarefa">Atualizar tarefa</string>
+    <string name="atualizar_tarefa_button">ATUALIZAR TAREFA</string>
+    <string name="nao_tem_uma_conta">Não tem uma conta?</string>
+    <string name="cadastre_se">Cadastre-se</string>
+    <string name="adicionar_nova_tarefa">Adicionar nova tarefa</string>
+    <string name="descricao">Descrição</string>
+    <string name="prioridade">Prioridade</string>
+    <string name="completa">Completa</string>
+    <string name="clique_para_selecionar_a_data">Clique para selecionar a data limite</string>
+    <string name="adicionar_tarefa">Adicionar tarefa</string>
+</resources>
