@@ -32,7 +32,6 @@ class TaskListFragment : Fragment(), View.OnClickListener {
     private val viewModelPriority: ViewModelPriority by viewModel()
     private var mSecurityPreferences: SecurityPreferences? = null
     private var mTaskFilter: Int = 0
-    // private lateinit var mIOnTaskListFragmentInteractionListener : IOnTaskListFragmentInteractionListener
     private lateinit var mApdapter: TaskListAdapter
     private lateinit var rootView: View
 
@@ -48,13 +47,6 @@ class TaskListFragment : Fragment(), View.OnClickListener {
 
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (arguments != null) {
-            mTaskFilter = arguments!!.getInt(SharedPreferencesConstantes.Taskfilter.KEY)
-        }
-    }
-
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -65,17 +57,17 @@ class TaskListFragment : Fragment(), View.OnClickListener {
         rootView.findViewById<FloatingActionButton>(R.id.fabAddTask).setOnClickListener(this)
         mRecyclerView = rootView.findViewById(R.id.taskList)
         mSecurityPreferences = SecurityPreferences(mContext!!)
-        val idTask = mSecurityPreferences!!.getStoredString(SharedPreferencesConstantes.Key.USER_ID)
-        mApdapter = TaskListAdapter(viewModel.getListTask(mTaskFilter, idTask!!.toInt()), viewModelPriority, rootView.context)
+        mApdapter = TaskListAdapter(mutableListOf(), viewModelPriority, rootView.context)
         enableSwipeToDeleteAndUndo(rootView)
         mRecyclerView.layoutManager = LinearLayoutManager(mContext)
-
-
         return rootView
     }
 
     override fun onResume() {
         super.onResume()
+        if (arguments != null) {
+            mTaskFilter = arguments!!.getInt(SharedPreferencesConstantes.Taskfilter.KEY)
+        }
         loadTask()
     }
 
@@ -108,10 +100,6 @@ class TaskListFragment : Fragment(), View.OnClickListener {
                 viewModel.delete(taskEntity)
 
                 val snack = Snackbar.make(view, "Item removido com sucesso.", Snackbar.LENGTH_LONG)
-                snack.setAction("UNDO") {
-                    // adapter!!.restoreItem(item, position)
-                    mRecyclerView.scrollToPosition(position)
-                }
 
                 snack.setActionTextColor(Color.YELLOW)
                 snack.show()

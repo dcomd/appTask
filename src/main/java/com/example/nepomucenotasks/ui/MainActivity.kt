@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val email = header.findViewById<TextView>(R.id.textEmail)
 
         name.text = mSecurityPreferences.getStoredString(SharedPreferencesConstantes.Key.USER_NAME)
-        email.text = mSecurityPreferences.getStoredString(SharedPreferencesConstantes.Key.USER_NAME)
+        email.text = mSecurityPreferences.getStoredString(SharedPreferencesConstantes.Key.USER_EMAIL)
 
 
     }
