@@ -37,11 +37,6 @@ class TaskListAdapter(
         holder.bindData(taskList, viewModel,context)
     }
 
-    fun getData(): MutableList<TaskEntity> {
-        return list
-    }
-
-
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var txtDescricao = itemView.txtDescricao
