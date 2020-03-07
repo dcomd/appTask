@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.DatePicker
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.example.nepomucenotasks.R
 import com.example.nepomucenotasks.data.comom.SecurityPreferences
@@ -157,15 +158,10 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
         if (bundle != null) {
             this.mTaskId = bundle.getInt(SharedPreferencesConstantes.BUNDLE.TASKID, 0).toLong()
 
-            // Carrega tarefa
             if (mTaskId.toInt() != 0) {
                 textToolbar.setText(R.string.atualizar_tarefa)
                 buttonSave.setText(R.string.atualizar_tarefa_button)
-
-                // Carrega tarefa
                 val task = viewModelTask.get(mTaskId.toInt())
-
-
                 editDescription.setText(task?.description)
                 buttonDate.text = task?.dueDate
                 if (task != null) {

@@ -14,10 +14,7 @@ import androidx.fragment.app.Fragment
 import com.example.nepomucenotasks.R
 import com.example.nepomucenotasks.data.comom.SecurityPreferences
 import com.example.nepomucenotasks.data.constants.SharedPreferencesConstantes
-import com.example.nepomucenotasks.ui.viewModel.ViewModelPriority
 import kotlinx.android.synthetic.main.app_bar_main.*
-import org.koin.android.viewmodel.ext.android.viewModel
-import java.time.DayOfWeek
 import java.util.*
 
 

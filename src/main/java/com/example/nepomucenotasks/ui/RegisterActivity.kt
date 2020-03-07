@@ -50,18 +50,17 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     private fun handlerSave() {
 
         userEntity = UserEntity(
-            null,
-            email = emailEdt?.text.toString(),
-            name = editName?.text.toString(),
-            password = passwordEdt?.text.toString()
+                null,
+                email = emailEdt?.text.toString(),
+                name = editName?.text.toString(),
+                password = passwordEdt?.text.toString()
         )
 
         viewModel.saveUser(userEntity!!, this)
     }
 
-    private fun observables(){
+    private fun observables() {
         viewModel.viewLiveDataTypeEnumEventos.observe(this, Observer {
-
             when (it) {
                 EnumEventos.SUCESS.value -> {
                     startActivity(Intent(this, MainActivity::class.java))
